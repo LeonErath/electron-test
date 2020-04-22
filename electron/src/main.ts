@@ -38,7 +38,7 @@ function createWindow() {
   });
 
   mainWindow.loadURL(
-    process.env.ELECTRON_URL || constructAssetPath("dist/index.html", true)
+    process.env.ELECTRON_URL || constructAssetPath("build/index.html", true)
   );
 
   function parseUri(uri: string) {
