@@ -24,6 +24,7 @@ app.setAboutPanelOptions({
   copyright: "erath GmbH",
   version: "",
   credits: "These are some lame credits", // only macOs, Windows
+  website: "http://sipgate.de", //only linux
   iconPath: "", //only linux, Windows todo
 });
 

@@ -27,8 +27,14 @@
     "target": "AppImage"
   },
   "win": {
-    "publisherName": ["Sipgate GmbH"],
-    "artifactName": "${name}-${version}.${ext}"
+    "publisherName": ["Test GmbH"],
+    "artifactName": "${name}-${version}.${ext}",
+    "target": [
+      {
+        "target": "portable",
+        "arch": ["x64", "ia32"]
+      }
+    ]
   },
   "npmRebuild": false,
   "extends": null,
