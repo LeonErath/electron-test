@@ -19,12 +19,12 @@ app.setAsDefaultProtocolClient("tel");
 app.setAsDefaultProtocolClient("softphone");
 
 app.setAboutPanelOptions({
-  applicationName: "Sipgate Softphone",
+  applicationName: "Test App",
   applicationVersion: "0.0.1",
   copyright: "erath GmbH",
   version: "",
   credits: "These are some lame credits", // only macOs, Windows
-  website: "http://sipgate.de", //only linux
+  website: "http://google.de", //only linux
   iconPath: "", //only linux, Windows todo
 });
 
@@ -61,7 +61,7 @@ function createWindow() {
       path: [command, action, args],
     } = parseUri(url);
 
-    if (protocol === "softphone") {
+    if (protocol === "test") {
       if (command === "login") {
         const code = new URLSearchParams(args).get("code");
         if (action === "authenticate" && code) {
@@ -144,9 +144,7 @@ app.on("ready", () => {
   };
 
   const help = () => {
-    shell.openExternal(
-      "https://teamhelp.sipgate.de/hc/de/articles/360006738717-sipgate-Webphone-Beta"
-    );
+    shell.openExternal("https://google.de");
   };
 
   const logout = () => {

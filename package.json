@@ -1,8 +1,8 @@
 {
   "name": "electron-test",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
-  "author": "Sipgate",
+  "author": "Erath",
   "homepage": "./",
   "description": "app-web",
   "main": "electron/bundle.js",
