@@ -1,6 +1,6 @@
 {
   "name": "electron-test",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "author": "Sipgate",
   "homepage": "./",
@@ -33,7 +33,7 @@
     "start:electron": "yarn run bundle:electron:dev && env-cmd -f ./env/.env.electron concurrently \"node ./bin/electron-dev\" \"react-scripts start\"",
     "compile:electron": "yarn run bundle:electron:prod && env-cmd -f ./env/.env.build.electron yarn run build",
     "electron-builder": "DEBUG=electron-notarize electron-builder",
-    "build:electron": "yarn run compile:electron && DEBUG=electron-notarize electron-builder",
+    "build:electron": "yarn run compile:electron && DEBUG=electron-notarize electron-builder build -mwl",
     "bundle:electron:dev": "webpack --config electron/webpack.config.js --mode development",
     "bundle:electron:prod": "webpack --config electron/webpack.config.js --mode production",
     "publish:electron": "yarn run compile:electron && electron-builder --publish always"
