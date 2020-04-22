@@ -1,0 +1,36 @@
+{
+  "appId": "com.erath.desktop",
+  "productName": "TestApp",
+  "directories": {
+    "buildResources": "assets"
+  },
+  "files": [
+    "build/**/*",
+    "electron/bundle*",
+    "!node_modules",
+    "!build/google*.html",
+    "!build/service-worker.js"
+  ],
+  "mac": {
+    "artifactName": "${name}-${version}.${ext}",
+    "category": "public.app-category.business",
+    "target": ["zip", "dmg"],
+    "entitlements": "./assets/entitlements.mac.plist",
+    "entitlementsInherit": "./assets/entitlements.mac.plist",
+    "extendInfo": {
+      "NSMicrophoneUsageDescription": "Required for telephony functionality"
+    }
+  },
+  "linux": {
+    "artifactName": "${name}-${version}.${ext}",
+    "category": "Office",
+    "target": "AppImage"
+  },
+  "win": {
+    "publisherName": ["Sipgate GmbH"],
+    "artifactName": "${name}-${version}.${ext}"
+  },
+  "npmRebuild": false,
+  "extends": null,
+  "afterSign": "./bin/notarize-mac-app.js"
+}
